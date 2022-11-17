@@ -1,0 +1,17 @@
+//5.	Write a program to print all even numbers between m and n (m, n are user inputs) in reverse order.
+
+#include<stdio.h>
+int main()
+{
+    int m,n,i;
+    printf("enter m:");
+    scanf("%d",&m);
+     printf("enter n:");
+    scanf("%d",&n);
+    for(i=n;i>=m;i--){
+        if(i%2==0)
+            printf("%d\n",i);
+    }
+return 0;
+
+}
