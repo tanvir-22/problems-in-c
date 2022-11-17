@@ -1,0 +1,40 @@
+/*7.	Write a C program to find power of any number using for loop.  Don’t use pow() function. Example: 
+Enter base:    2
+Enter power:   5
+result= 32
+       Enter base:    2
+Enter power:   -3
+result= 0.125
+
+*/
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int base,power,i;
+    float result=1;
+    printf("enter base and power:");
+    scanf("%d%d",&base,&power);
+    if(power>0)
+    {
+        for(i=1; i<=power; i++)
+        {
+            result*=base;
+        }
+    }
+    else
+    {
+        power=-power;
+        for(i=1; i<=power; i++)
+        {
+            result*=(1.0/base);
+        }
+    }
+    printf("%.3f",result);
+    return 0;
+
+}
