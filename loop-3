@@ -1,0 +1,15 @@
+//2.	Write a program that computes the following series using for loop: 10000+2000+400+…+8
+
+#include<stdio.h>
+int main()
+
+{
+
+    int i=10000,sum=0;
+    while(i>=8){
+        sum=sum+i;
+         i=i/5;
+    }
+    printf("%d",sum);
+    return 0;
+}
