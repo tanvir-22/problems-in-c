@@ -1,0 +1,19 @@
+/*  Write a C program to read an integer and compute the sum of digits in it. Sample Input/Output:
+Enter any integer: 452
+Sum of digits in 452: 11
+*/
+#include<stdio.h>
+int main()
+{
+    int n,sum=0,rem,m;
+    printf("enter n:");
+    scanf("%d",&n);
+    while(n!=0){
+            m=n;
+        rem=m%10;
+        sum=sum+rem;
+        n=n/10;
+    }
+    printf("%d",sum);
+    return 0;
+}
