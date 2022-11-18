@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int i,n,r,den=1,neu=1;
+    printf("enter n & r:");
+    scanf("%d%d",&n,&r);
+    for(i=n-r+1;i<=n;i++){
+        neu*=i;
+    }
+    for(i=1;i<=r;i++){
+        den*=i;
+    }
+    printf("%d",neu/den);
+    return 0;
+}
