@@ -1,0 +1,14 @@
+// Write a C program to read 2 integers: n and r from user and compute the value of (_^n)P_r= n!/(n-r)!
+
+#include<stdio.h>
+int main()
+{
+    int n,r,i,fact=1;
+    printf("enter n and r : ");
+    scanf("%d%d",&n,&r);
+    for(i=n-r+1;i<=n;i++){
+        fact=fact*i;
+    }
+    printf("%d p %d: %d",n,r,fact);
+    return 0;
+}
