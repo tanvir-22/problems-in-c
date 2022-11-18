@@ -1,0 +1,27 @@
+/*   2.	Write a C program to check whether an input number is a perfect number or not. 
+A perfect number is a positive integer which is equal to the sum of its proper positive factors.
+For e.g. 6 is a perfect number; 
+because proper factors of 6 are 1, 2, 3 and 1+2+3 = 6. 
+Also, 28 is a perfect number since sum of its factors = 1+2+4+7+14 = 28.
+*/
+
+
+#include<stdio.h>
+int main()
+{
+    int n,i,sum=0;
+    printf("enter number:");
+    scanf("%d",&n);
+    for(i=1;i<=n/2;i++){
+        if(n%i==0){
+            sum=sum+i;
+        }
+    }
+    if(n==sum&&n>0){
+        printf("%d is perfect number!",n);
+    }
+    else{
+        printf("%d is not perfect number!",n);
+    }
+    return 0;
+}
