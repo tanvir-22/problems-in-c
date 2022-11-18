@@ -1,0 +1,17 @@
+//1.	Write a C program to read an integer from user and output its last and first digit
+
+
+
+#include<stdio.h>
+int main()
+{
+    int i,n;
+    printf("\nenter any number:");
+    scanf("%d",&n);
+    printf("\nlast digit :%d",n%10);
+    while(n>10){
+        n=n/10;
+    }
+    printf("\nfirst digit:%d",n);
+    return 0;
+}
