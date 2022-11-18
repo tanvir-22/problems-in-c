@@ -1,0 +1,22 @@
+. Write a C program to read an integer from user and count the total number of nonzero digits in it.
+
+#include<stdio.h>
+int main()
+{
+    int count=0,n;
+    printf("enter n:");
+    scanf("%d",&n);
+    while(n!=0){
+        if(n%10!=0)
+            count++;
+        n=n/10;
+    }
+    printf("non zero :%d",count);
+    return 0;
+}
+/*example n=2020
+2020/10=202 rem=0 so count will not increase
+202/10=20 rem=2 so count=1
+20/10=2 rem=0 so count=1
+2/10=0 rem=2 so count =2
+as n=0 the loop will be terminated   */
