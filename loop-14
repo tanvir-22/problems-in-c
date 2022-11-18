@@ -1,0 +1,31 @@
+/*4.	Write a C program to compute the sum of digits of an input number and check if this sum is a prime or not.
+Sample Input/Output: 
+Enter any integer: 2821
+Sum of its digits = 13. It is a prime number.
+*/
+#include<stdio.h>
+int main()
+{
+    int n,r,sum=0,isprime=1,i;
+    printf("enter any number:");
+    scanf("%d",&n);
+    while(n>0){
+        r=n%10;
+        sum=sum+r;
+        n=n/10;
+    }
+    printf("\n%d",sum);
+    for(i=2;i<=sum/2;i++){
+        if(sum%2==0){
+            isprime=0;
+            break;
+        }
+    }
+    if(isprime==0){
+        printf("\n%d is not prime!",sum);
+    }
+    else{
+        printf("\n%d is prime!",sum);
+    }
+    return 0;
+}
