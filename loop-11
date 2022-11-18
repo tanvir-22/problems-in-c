@@ -1,0 +1,19 @@
+/*1.	Write a C program to enter any number from user and find the reverse of a given number using loop. Sample input/output (bold ones are user inputs):
+Enter a number: 2345
+Reverse of 2345 is: 5432
+*/
+
+#include<stdio.h>
+int main()
+
+{
+    int n,r;
+    printf("enter any number:");
+    scanf("%d",&n);
+    while(n>0){
+        r=n%10;
+        printf("%d",r);
+        n=n/10;
+    }
+    return 0;
+}
