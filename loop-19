@@ -1,0 +1,28 @@
+//Write a program that prints first n prime numbers (n is input). E.g. for n = 5 it should print: 2,3,5,7,11,
+
+
+
+#include<stdio.h>
+int main()
+{
+    int i=2,j,n,isprime;
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        isprime=1;
+        for(j=2; j<=i/2; j++)
+        {
+            if(i%j==0){
+                isprime=0;
+            break;
+            }
+        }
+        if(isprime==1){
+            printf("\n%d",i);
+        n--;
+        }
+
+    i++;
+    }
+    return 0;
+}
