@@ -1,0 +1,24 @@
+//1.	Write a C program to print all prime numbers between 1 and n in reverse order (n is an input). 
+
+
+#include<stdio.h>
+int main()
+{
+    int i,n,j,isprime=0;
+    printf("enter N:");
+    scanf("%d",&n);
+    for(i=n;i>1;i--){
+        for(j=i/2;j>=1;j--){
+            if(i%j==0&&j!=1){
+                isprime=0;
+                break;
+            }
+        else
+            isprime=1;
+        }
+        if(isprime==1){
+            printf("\t%d",i);
+        }
+    }
+    return 0;
+}
