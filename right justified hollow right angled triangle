@@ -16,23 +16,18 @@ int main()
     int i,j,n,space;
     printf("enter N:");
     scanf("%d",&n);
-    for(i=1; i<=n; i++)
-    {
-        for(space=i; space<n; space++)
-        {
+    for(i=1;i<=n;i++){
+        for(space=1;space<=n-i;space++){
             printf(" ");
         }
-        for(j=1; j<=n; j++)
-        {
-            if(i==j||j==1||i==n)
-            {
-                printf("*");
-
-            }
+    for(j=1;j<=i;j++){
+        if(i==j||j==1||i==n)
+            printf("*");
             else
                 printf(" ");
-        }
-        printf("\n");
+
     }
-    return 0;
+    printf("\n");
+    }
+return 0;
 }
