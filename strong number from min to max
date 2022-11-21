@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+    int i, j,k,max,min,temp,sum,r;
+    long fact;
+    printf("Input starting range of number : ");
+    scanf("%d", &min);
+    printf("Input ending range of number: ");
+    scanf("%d", &max);
+    for(k=min; k<=max; k++)
+    {
+        temp=k;
+        sum=0;
+        while(temp!=0){
+                r=temp%10;
+            fact = 1;
+            for(i=1; i<=r; i++)
+            {
+                fact = fact * i;
+            }
+            sum = sum + fact;
+            temp=temp/10;
+    }
+        if(sum ==k){
+
+            printf("%d  ", k); }
+    }
+return 0;
+}
