@@ -1,0 +1,19 @@
+#include<stdio.h>
+float sq(float a)
+{
+    return a*a;
+}
+
+void hello()
+{
+    printf("\nhello function!");
+}
+int main()
+{
+    float x,r;
+    scanf("%f",&x);
+    r=sq(x);
+    printf("%f",r);
+    hello();
+    return 0;
+}
