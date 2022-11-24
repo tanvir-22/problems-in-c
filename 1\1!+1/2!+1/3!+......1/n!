@@ -33,3 +33,26 @@ int main()
     printf("%.2f",sum);
     return 0;
 }
+
+//1.	Find the sum of the following series using user-defined function:  1/1! + 2/2! + 3/3! + …… +1/N!
+#include<stdio.h>
+float ser(int i)
+{
+    int fact=1,c;
+    float sum=0;
+    for(c=1;c<=i;c++)
+    {
+        fact=fact*c;
+        sum+=(1.0/fact);
+    }
+    return sum;
+}
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    float r=ser(x);
+    printf("%f",r);
+    return 0;
+}
+
