@@ -56,7 +56,7 @@ int main()
     printf("%f",(sum+(1+x)));
     return 0;
 }
-
+/*input x=1 n=2(because we considered (1+x) extra so there is 2 term (x/2!+x/3!)*/
 
 
 // 1-X^2/2!+X^4/4!- .......
