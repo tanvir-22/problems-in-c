@@ -33,6 +33,30 @@ int main()
     printf("%.2f",sum);
     return 0;
 }
+///1+x+x^2/2!+x^3/3!+
+#include<stdio.h>
+int main()
+{
+    int k=2,x,n,i,j;
+    float sum=0;
+    printf("enter x:");
+    scanf("%d",&x);
+    printf("enter n:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        int fact=1;
+        for(j=1;j<=k;j++)
+        {
+            fact*=j;
+        }
+        sum+=pow(x,k)/fact;
+    k++;
+    }
+    printf("%f",(sum+(1+x)));
+    return 0;
+}
+
 
 
 // 1-X^2/2!+X^4/4!- .......
