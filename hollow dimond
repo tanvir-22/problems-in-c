@@ -45,26 +45,41 @@ int main()
 ***   ***
 **** ****
 *********
-
 */
-#include<stdio.h>
-int main()
-{
-    int i,j,x=0;
-    for(i=1;i<=9;i++)
-    {
-        if(i<=5)
-            x++;
-        else
-            x--;
-    for(j=1;j<=9;j++)
-    {
-        if(j<=6-x||j>=4+x)
-            printf("*");
-        else
-            printf(" ");
-    }
-    printf("\n");
-    }
-    return 0;
+#include <stdio.h>
+int main() {
+   int i, j, n, k, s;//k = number of *s on left/right end; s = # of spaces
+   printf("Enter the number of rows till midpoint: ");
+   scanf("%d", &n);
+   for (i = 1, k = n, s = 0; i <= 2*n-1; i++) {//prints 2n-1 lines/rows
+      //left *s
+      for (j = 1; j <= k; ++j) {
+         printf("*");
+      }
+
+      //middle spaces
+      for (j = 1; j <= s; ++j) {
+         printf(" ");
+      }
+
+      //right *s
+      for (j = 1; j <= k; ++j) {
+         printf("*");
+      }
+      printf("\n");
+
+      if(i<n)
+        k = k-1;
+      else
+        k = k+1;
+
+      if(i<n)
+        s = s + 2;
+      else
+        s = s - 2;
+   }
+   return 0;
 }
+
+
+
