@@ -1,0 +1,43 @@
+#include <stdio.h>
+int primepal(int m)
+{
+    int N, rem, rev, save, i; ///rev=sum save=temp N=i m=n
+    for(N=m; ; N++)
+    {
+        //check if N is a palindrome or not.
+        rev = 0;
+        save = N;
+        while(save!=0)
+        {
+            rem = save%10;
+            rev = rev*10+rem;
+            save = save/10;
+        }
+        if(rev == N) //if N is palindrome then check if N is prime as well.
+        {
+            int flag = 1;
+            for(i=2; i<=N/2; i++)
+            {
+                if(N%i == 0)
+                {
+                    flag = 0;
+                    break;
+                }
+            }
+            if(flag == 1)
+            {
+                return N;
+                //printf("%d is both prime and palindrome",N);
+                //break;
+            }
+        }
+    }
+}
+
+void main()
+{
+    int x, result;
+    scanf("%d", &x);
+    result = primepal(x);//calling primepal() function
+    printf("%d", result);
+}
