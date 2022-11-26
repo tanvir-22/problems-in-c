@@ -4,7 +4,13 @@ int main()
     int m,n,i,j,isprime;
     printf("enter m and n:");
     scanf("%d%d",&m,&n);
-    for(i=m;i<=n;i++){
+    if(m>n){
+        temp=n;
+        n=m;
+        m=temp;
+    }
+   
+   for(i=m;i<=n;i++){
             isprime=1;
         for(j=2;j<=i/2;j++){
             if(i%j==0){
