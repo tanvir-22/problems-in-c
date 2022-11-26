@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int n,a=0,b=1,c,i,sum=0;
+    printf("enter n:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        printf("\t%d",a);
+        sum+=a;
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    printf("\nsum:%d",sum);
+    return 0;
+}
