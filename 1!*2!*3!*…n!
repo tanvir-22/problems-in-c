@@ -3,13 +3,14 @@
 #include <stdio.h>
 int main()
 {
-    long n,m,s=0,h=1;
+    int  n,i,fact=1,j,sum=1;
     scanf("%d",&n);
-    for(m=1;m<=n;m++)
-    {
-        h=h*m;
-        s=s+h;
-    }
-    printf("%ld",s);
+    for(i=1;i<=n;i++)
+    {       
+       
+           fact*=i;
+        sum*=fact;
+}
+    printf("%d",sum);
     return 0;
 }
