@@ -37,3 +37,25 @@ int main()
     printf("%f",r);
     return 0;
 }
+//3.	Compute the value of ab using recursion, where a and b are integers.
+
+
+
+#include<stdio.h>
+int power(int a,int b)
+{
+    if(b==0)
+        return 1;
+    else if(a==0)
+        return 0;
+    else
+        return (power(a,b-1)*a);
+}
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int r=power(a,b);
+    printf("%d",r);
+    return 0;
+}
