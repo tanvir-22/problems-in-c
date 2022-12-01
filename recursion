@@ -1,0 +1,17 @@
+/// 1.	Write a C code to find the sum of the following series using RECURSIVE FUNCTIONS:
+///1^2 + 2^2 + 3^2 + … + N^2
+
+#include<stdio.h>
+int sum(int n)
+{
+    if(n==0)
+        return 0;
+    else
+        return (sum(n-1)+(n*n));
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    printf("%d",sum(n));
+}
