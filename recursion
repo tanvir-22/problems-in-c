@@ -107,3 +107,31 @@ int main()
     printf("%f",sum(n));
     return 0;
 }
+
+///	Write a C program to compute sum of digits of a given number using recursion.
+/// Sample input/output:
+/// Enter an integer: 5431
+/// Sum of digits = 13
+
+
+#include<stdio.h>
+int sum(int n)
+{                       
+        int rem,temp;
+        temp=n;
+        rem=temp%10;
+        temp=temp/10;
+        if(rem==0)
+            return 0;
+        else
+            return sum(temp)+rem;
+}
+int main()
+{
+    int n;
+    printf("enter n : ");
+    scanf("%d",&n);
+    int result=sum(n);
+    printf("%d",result);
+    return 0;
+}
