@@ -135,3 +135,51 @@ int main()
     printf("%d",result);
     return 0;
 }
+
+/* Write a C program to print the digits of a given number in words using recursion.
+Sample input/output:
+Enter an integer: 5431	
+Number in words: Five Four Three One
+*/
+
+
+#include<stdio.h>
+void word(int n)
+{
+    int a;
+    if(n==0)
+        return;
+    else
+        a=n%10;
+        word(n/10);
+        switch(a)
+        {
+            case 1:printf("one");
+                        break;
+            case 2:printf("two");
+                        break;
+            case 3:printf("three");
+                        break;
+            case 4:printf("four");
+                        break;
+            case 5:printf("five");
+                        break;
+            case 6:printf("six");
+                        break;
+            case 7:printf("seven");
+                        break;
+        case 8:printf("eight");
+                        break;
+        case 9:printf("nine");
+                        break;
+
+        case 10:printf("ten");
+                        break;
+        }
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    word(n);
+}
