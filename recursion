@@ -59,3 +59,24 @@ int main()
     printf("%d",r);
     return 0;
 }
+// 1 + r + r2 + … + rn (read the values of r and n from user)
+//	Compute the sum of the above geometric progression using recursion.
+
+#include<stdio.h>
+#include<math.h>
+int sum(int n,int r)
+{
+    if(n==0)
+        return 1;
+    else
+        return pow(r,n)+sum(r,n-1);
+}
+int main()
+{
+    int n,r;
+    printf("enter n and r:");
+    scanf("%d%d",&n,&r);
+    int  result=sum(n,r);
+    printf("%d",result);
+    return 0;
+}
