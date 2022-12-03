@@ -1,3 +1,5 @@
+//For Example: 145 is strong number. Since, 1! + 4! + 5!
+
 #include<stdio.h>
 int main()
 {
