@@ -290,4 +290,26 @@ int main()
     }
 
 }
+VVVVVVVVVVVVVVVVVVVVVV V   V V  V  V V  V V V V V
+#include<stdio.h>
+int main()
+{
+    int n,px,py,i,j;
+    scanf("%d",&n);
+    px=1;
+    py=2*n-1;
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=2*n;j++)
+        {
+            if(j==px||j==py)
+                printf("*");
+            else
+                printf(" ");
+        }
+    printf("\n");
+    px++;
+    py--;
+    }
+}
 
