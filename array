@@ -193,4 +193,29 @@ int main()
     return 0;
 }
 
+//2.	Write a program that prints all the indexes in which a search key appears
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n,target;
+    printf("enter ara size:");
+    scanf("%d",&n);
+    int ara[n];
+    printf("enter ara element:");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&ara[i]);
+    }
+    printf("enter target:");
+    scanf("%d",&target);
+    for(int i=0;i<n;i++)
+    {
+        if(ara[i]==target)
+            printf("\n %d index is:%d",target,i);
+    }
+    return 0;
+}
 
