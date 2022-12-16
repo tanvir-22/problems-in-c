@@ -1,0 +1,196 @@
+//Write a program that prints the no. of odd & no. of even numbers in an array.
+#include<stdio.h>
+int main()
+{
+    int size,odd=0,even=0;
+    printf("enter array size:");
+    scanf("%d",&size);
+    int ara[size];
+    printf("enter array element :");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&ara[i]);
+    }
+    for(int i=0;i<size;i++)
+    {
+        printf("%d",ara[i]);
+    }
+    printf("\neven numbers in array are:");
+    for(int i=0;i<size;i++)
+    {
+        if(ara[i]%2==0){
+           even++;
+            printf("\t%d",ara[i]);
+            }
+    }
+     printf("\ntotal even number in araay : %d",even);
+    printf("\nodd numbers in array are:");
+    for(int i=0;i<size;i++)
+    {
+        if(ara[i]%2!=0){
+           odd++;
+            printf("\t%d",ara[i]);}
+    }
+    printf("\ntotal odd in array : %d",odd);
+    return 0;
+}
+
+
+
+
+//find the maximum number in array
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n,max;
+    printf("enter the array size:");
+    scanf("%d",&n);
+    int ara[n];
+    printf("enter array element:");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&ara[i]);
+    }
+    max=ara[0];
+    for(int i=0;i<n;i++)
+    {
+        if(ara[i]>max)
+            max=ara[i];
+    }
+    printf("the max is : %d",max);
+
+}
+
+
+//3.	C Program to read two arrays from user, add them, and then output their sum:
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("\nenter array size:");
+    scanf("%d",&n);
+    int a[n],b[n],c[n];
+    printf("enter first array:");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter second array:");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&b[i]);
+    }
+
+
+    for(int i=0;i<n;i++)
+    {
+        c[i]=a[i]+b[i]; //for multiplication use this *
+        printf("\ntotal sum is %d+%d : %d",a[i],b[i],c[i]);
+    }
+
+    return 0;
+}
+
+
+//find space in a string
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    char str[100];
+    int space=0;
+    printf("enter string:");
+    gets(str);
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if(str[i]==' ')
+            space++;
+    }
+    printf("\nthe number of spaces are : %d",space);
+    return 0;
+}
+
+
+
+// Write a program that searches for a given value (called a search key) in an array .
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n,i,target;
+    printf("enter ara size:");
+    scanf("%d",&n);
+    int ara[n];
+    printf("enter array element: ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&ara[i]);
+    }
+    printf("enter search key:");
+    scanf("%d",&target);
+    int F=-1,L=0;
+    for(i=0;i<n;i++)
+    {
+        if(target!=ara[i])
+        {
+            continue;
+        }
+        if(F==-1)
+        {
+            F=i;
+        }
+        L=i;
+    }
+    printf("\nfirst occurence : %d  last occurence: %d ",F,L);
+    return 0;
+}
+
+
+//sorting array in ascending or descending order
+
+
+
+#include<stdio.h>
+int main()
+{
+    //a[5]=2 1 3 4 5 ...>1 2 3 4 5
+    int a[5],j,i,temp;
+    printf("enter array element:");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+        for(int i=0;i<5;i++)
+        {
+            for(int j=i+1;j<5;j++)
+            {
+                if(a[i]>a[j])   //for descending order use " < "
+                {
+                    temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        printf(" array element:");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",a[i]);
+    }
+    return 0;
+}
+
+
