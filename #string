@@ -77,3 +77,79 @@ int main()
     printf("\nnumber of digit : %d",d);
     return 0;
 }
+
+
+
+
+//find space in a string
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    char str[100];
+    int space=0;
+    printf("enter string:");
+    gets(str);
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if(str[i]==' ')
+            space++;
+    }
+    printf("\nthe number of spaces are : %d",space);
+    return 0;
+}
+
+
+
+///	Write a C program that counts the number of vowels in an input string.
+#include<stdio.h>
+int main()
+{
+    char str[40];
+    printf("enter string : ");
+//gets(str);
+  scanf("%[^\n]",&str);
+    int vowel=0,i;
+
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]=='a' ||str[i]=='e' ||str[i]=='i' ||str[i]=='o' ||str[i]=='u')
+            vowel++;
+    }
+    printf("total vowel : %d",vowel);
+    return 0;
+}
+
+
+///remove all vowel from string.
+
+
+
+#include<stdio.h>
+int main()
+{
+    char str[20],str2[20];
+    printf("enter a string : ");
+    gets(str);
+    int i,j;
+    for(i=0,j=0;str[i]!='\0';i++)
+    {
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u')
+        {
+            str[i]=' ';
+        }
+        else
+        {
+            str2[j++]=str[i];
+        }
+    }
+    str2[j]='\0';
+    printf("after removing the vowel : %s",str2);
+    return 0;
+}
+
+
+
