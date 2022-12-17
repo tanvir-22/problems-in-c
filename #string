@@ -1,0 +1,79 @@
+//reverse without function
+
+
+#include<stdio.h>
+int main()
+{
+    char str1[30]="tanvir rahman";
+    char str2[30];
+    int len=0,j,i;
+    for( i=0;str1[i]!='\0';i++)
+    {
+        len++;
+    }
+    for( j=0,i=len-1;i>=0;i--,j++)
+    {
+        str2[j]=str1[i];
+    }
+        str2[j] = '\0';
+        printf("\noriginal : %s",str1);
+        printf("\nreverse : %s",str2);
+        return 0;
+
+}
+
+
+//check the string palindrome or not .
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str1[30],str2[30];
+    int i,j,len=0;
+    printf("enter string : " );
+    gets(str1);
+    for(i=0;str1[i]!='\0';i++)
+    {
+        len++;
+    }
+    for(j=0,i=len-1;i>=0;i--,j++)
+    {
+        str2[j]=str1[i];
+    }
+    str2[j]='\0';
+    printf("\noriginal string : %s",str1);
+     printf("\nreverse string : %s",str2);
+     int d=strcmp(str1,str2);
+     if(d==0)                   ///if two string is palindrome this function return 0 
+        printf("\npalindrome");
+     else
+        printf("\nnot palindrome");
+    return 0;
+}
+
+
+///count string's capital small and digits
+
+#include<stdio.h>
+int main()
+{
+    char str[50];
+    printf("enter string : ");
+    gets(str);
+    int c,s,d,i;
+    i=c=s=d=0;
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]>=65 && str[i]<=90)
+            c++;
+         else if(str[i]>=97 && str[i]<=122)
+            s++;
+        else if (str[i]>=48 && str[i]<=57)
+            d++;
+    }
+    printf("\nnumber of capital : %d",c);
+    printf("\nnumber of small : %d",s);
+    printf("\nnumber of digit : %d",d);
+    return 0;
+}
