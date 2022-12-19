@@ -516,3 +516,35 @@ int countsearchkey(int a[],int n,int key)
     return count;
 }
 
+
+///RECURSION-using recursion to find the sum of an array .
+
+#include<stdio.h>
+float sum(float ara[],int size)
+{
+    if(size<=0)
+        return 0;
+    else
+        return (sum(ara,size-1)+ara[size-1]);
+}
+int main()
+{
+    int size,i;
+
+    printf("enter size:");
+    scanf("%d",&size);
+     float ara[size];
+    printf("enter array element:");
+    for(i=0;i<size;i++)
+    {
+        scanf("%f",&ara[i]);
+    }
+        float result,average;
+        result=sum(ara,size);
+        printf("\nsum of element : %f",result);
+        average=(result/size);
+        printf("\nthe average is : %f",average);
+        return 0;
+}
+
+
