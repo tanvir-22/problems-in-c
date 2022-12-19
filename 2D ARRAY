@@ -166,7 +166,7 @@ int main()
         for(j=0;j<c;j++)
         {
             printf("%10d",a[i][j]);
-            if(i==0||j==0||i==(r-1)|| j==(c-1))
+            if(i==0||j==0||i==(r-1)|| j==(c-1))    /// for main diagonal i==j for both diagonal i+j=r-1(because in that case matrix is square)
                 sum+=a[i][j];
         }
     printf("\n");
