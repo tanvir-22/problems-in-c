@@ -206,3 +206,61 @@ int main(){
 
    return 0;
 }
+
+
+
+///multiplication of 2/2 or 3/3 or 4/4 square matrix
+
+
+
+#include<stdio.h>
+int main()
+{
+    int r,c,sum=0;
+    printf("enter row and colum  : ");
+    scanf("%d%d",&r,&c);
+    int a[r][c],b[r][c],result[r][c],i,j,k;
+    printf("enter a element : ");
+    ///taking input of first ara
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+        printf("enter b element : ");
+     ///taking input of second ara
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    ///multiplying two array
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            for(k=0;k<c;k++)
+            {
+                sum+=a[i][k]*b[k][j];
+            }
+            result[i][j]=sum;
+            sum=0;
+
+        }
+
+    }
+    ///printing result array
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%10d",result[i][j]);
+        }
+    printf("\n");
+    }
+        return 0;
+}
