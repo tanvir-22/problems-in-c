@@ -152,4 +152,68 @@ int main()
 }
 
 
+///remove duplicate from string
+#include<stdio.h>
+int main()
+{
+    char str[]="aaabbb";
+   // printf("enter a string : ");
+   // scanf("%[^\n]",&str);
+
+    int i,j,k;
+    for(i=0;i<strlen(str);i++)
+    {
+        for(j=i+1;j<strlen(str);)
+        {
+            if(str[j]==str[i])
+            {
+                for(k=j;k<strlen(str);k++)
+                {
+                    str[k]=str[k+1];
+                }
+            }
+            else
+            {
+                j++;
+            }
+        }
+    }
+    printf("after removal  : %s",str);
+    return 0;
+}
+
+
+
+//to find the unique letter and their occurrence in a string .
+
+
+
+#include<stdio.h>
+int main()
+{
+    char str[100],ch;
+    printf("enter a string  : ");
+    scanf("%[^\n]",&str);
+    int count[26]={0};
+    int i;
+    for(i=0;i<strlen(str);i++)
+    {
+        ch=str[i];
+        if(ch>=65 && ch<=90)
+        {
+            ch=ch+32;
+        }
+    if(ch>=97 && ch<=122)
+    {
+        count[ch-'a']++;
+    }
+    }
+    for(i=0;i<26;i++)
+    {
+        if(count[i]>0)
+            printf("\n%c=%d",'a'+i,count[i]);           ///to  find only the unique element write only 'a'+i .
+    }
+}
+
+
 
