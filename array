@@ -448,3 +448,34 @@ void peo(int a[],int n)
         printf("\t%d",a[i]);
     }
 }
+
+
+///how many times a given array element appeared and its position 
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int a[5];
+    int i,key,count=0;
+    printf("enter array element : ");
+    for(i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter key : ");
+    scanf("%d",&key);
+    for(i=0;i<5;i++)
+    {
+        if(a[i]==key)
+        {
+            printf("\n%d appeard at position : %d",key,i+1);
+            count++;
+        }
+    }
+    printf("\n%d appeared %d times  " ,key,count);
+    return 0;
+}
+
