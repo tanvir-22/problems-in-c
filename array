@@ -401,3 +401,50 @@ int main()
         return 0;
     }
 
+///one arrray to two odd and even array
+
+
+
+#include<stdio.h>
+#define max 100
+void peo();
+int main()
+{
+    int a[max];
+    int n,i;
+    printf("enter aray size : ");
+    scanf("%d",&n);
+    printf("enter array element : ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int odd[max],even[max];
+    int oddcount=0,evencount=0;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]%2!=0)
+        {
+            odd[oddcount]=a[i];
+            oddcount++;
+        }
+        else
+        {
+            even[evencount]=a[i];
+            evencount++;
+        }
+    }
+    printf("\nthe odd array is : ");
+    peo(odd,oddcount);
+    printf("\nthe even element are : ");
+    peo(even,evencount);
+    return 0;
+}
+void peo(int a[],int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("\t%d",a[i]);
+    }
+}
