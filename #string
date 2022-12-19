@@ -216,4 +216,40 @@ int main()
 }
 
 
+///search a particular character in string using array
+
+
+
+#include<stdio.h>
+#include<string.h>
+void search(char str[],char target);
+int main()
+{
+    char str[200];
+    char target;
+    printf("enter a string : ");
+    gets(str);
+    printf("enter target : ");
+    scanf("%c",&target);
+    search(str,target);
+    return 0;
+}
+void search(char str[],char target)
+{
+     int i,count=0;
+    for(i=0; i<strlen(str); i++)
+    {
+        if(target==str[i])
+        {
+            count=1;
+            break;
+        }
+    }
+        if(count==1)
+            printf("found");
+            else
+            printf("not found");
+}
+
+
 
