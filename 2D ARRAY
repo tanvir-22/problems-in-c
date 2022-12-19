@@ -95,3 +95,49 @@ int main()
 
 }
 
+
+
+///sum of even and odd number of a 2D array .
+
+
+
+
+#include<stdio.h>
+int main(){
+    int r,c;
+    printf("enter r and c : ");
+    scanf("%d%d",&r,&c);
+    int a[r][c],i,j;
+        printf("enter a matrix : ");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    int sum1=0,sum2=0;
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            if((a[i][j])%2==0)
+                sum1=sum1+(a[i][j]);
+            else
+                sum2=sum2+(a[i][j]);
+        }
+    }
+    printf("the original matrix : \n");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%10d",a[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\nsum of even : %d",sum1);
+    printf("\nsum of odd : %d",sum2);
+    return 0;
+}
+
