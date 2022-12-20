@@ -1,0 +1,43 @@
+///take input from user and print the student information whose mark is high;
+
+
+#include<stdio.h>
+#include<stdlib.h>
+struct student
+{
+    char name[20];
+    int mark;
+}s[3];
+int main()
+{
+    int i;
+    for(i=0;i<3;i++)
+    {
+         printf("enter name : ");
+          scanf("%s",&s[i].name);
+          fflush(stdin);            ///to avoid input taking problem
+          printf("enter mark : ");
+          scanf("%d",&s[i].mark);
+            fflush(stdin);
+    }
+   for(i=0;i<3;i++)
+   {
+       printf("\nname : %s",s[i].name);
+       printf("\nmarks : %d",s[i].mark);
+   }
+   int n,max;
+   max=s[0].mark;
+    for(i=0;i<3;i++)
+    {
+        if(max<s[i].mark)
+        {
+            max=s[i].mark;
+            n=i;
+        }
+    }
+printf("\nhighest mark student is : ");
+printf("\n name :%s",s[n].name);
+printf("\n marks : %d",s[n].mark);
+return 0;
+
+}
