@@ -41,3 +41,93 @@ printf("\n marks : %d",s[n].mark);
 return 0;
 
 }
+
+
+
+///print the old age person details from a structure 
+
+
+
+#include <stdio.h>
+
+typedef struct{
+    int d;
+    int m;
+    int y;
+}date;
+
+typedef struct{
+    char name[50];
+    date dob;
+    float marks;
+}student;
+
+void main()
+{
+    int n;
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    student s[n];
+
+    printf("\nEnter information of students:\n");
+    for(int i=0; i<n; i++)
+    {
+        printf("\nEnter name: ");
+        scanf("%s",s[i].name);
+
+        printf("\nEnter date of birth: ");
+        scanf("%d%d%d", &s[i].dob.d, &s[i].dob.m, &s[i].dob.y);
+
+        printf("\nEnter marks: ");
+        scanf("%f",&s[i].marks);
+
+        printf("\n");
+    }
+    printf("Displaying information of students:\n\n");
+
+    for(int i=0; i<n; i++)
+    {
+     printf("\nName: %s", s[i].name);
+     printf("\nDate of Birth: %d/%d/%d", s[i].dob.d, s[i].dob.m, s[i].dob.y);
+     printf("\nMarks: %.1f",s[i].marks);
+   }
+
+   int max1 = s[0].dob.y;
+   int max2 = s[0].dob.m;
+    int max3 = s[0].dob.d;
+   int index = 0;
+
+   for(int i=0; i<n; i++)
+   {
+       if(s[i].dob.y < max1)
+       {
+           max1 = s[i].dob.y;
+           index = i;
+       }
+       else if(s[i].dob.y==max1)
+       {
+           if(s[i].dob.m <max2)
+           {
+               max2 = s[i].dob.m;
+               index = i;
+           }
+       }
+       else if(s[i].dob.y==max1)
+       {
+           if(s[i].dob.m == max2)
+           {
+              if(s[i].dob.d < max3)
+           {
+               max3 = s[i].dob.m;
+               index = i;
+           }
+           }
+       }
+   }
+
+     printf("\n\nDisplaying most aged person:\n\n");
+     printf("\nName: %s", s[index].name);
+     printf("\nDate of Birth: %d/%d/%d", s[index].dob.d, s[index].dob.m, s[index].dob.y);
+     printf("\nMarks: %.1f",s[index].marks);
+}
