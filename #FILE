@@ -74,3 +74,32 @@ int main()
     }
 
 }
+
+
+///write in a file using fprintf function 
+
+
+#include<stdio.h>
+#include<stdio.h>
+int main()
+{
+    FILE *file;
+    file = fopen("new.txt","a");
+    char name[30];
+    int age;
+    if(file==NULL)
+    {
+        printf("file not exist ");
+    }
+    else
+    {
+        printf("file opened ");
+        printf("enter name :");
+        gets(name);
+        printf("enter age :");
+        scanf("%d",&age);
+        fprintf(file,"name : %s , age : %d\n",name,age);        ////three parameter here!
+        printf("\nfile is written successfully ! ");
+        fclose(file);
+    }
+}
