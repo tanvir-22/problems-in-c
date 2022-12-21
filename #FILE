@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    ///opening a file
+    
+    FILE *file; ///declare file pointer
+    file = fopen("text.txt","w");///this txt file will be in the file pointer variable
+    if(file==NULL)
+        printf("file does not exist !");
+    else
+    {
+        printf("file is opened  ");
+        fclose(file);//close file
+    }
+
+}
