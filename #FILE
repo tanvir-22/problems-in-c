@@ -45,3 +45,32 @@ int main()
     }
 
 }
+
+
+
+///writing in a file
+///taking input from user.
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    FILE *file;
+    char name[20];
+    int len=strlen(name);
+    int i;
+    file = fopen("text.txt","a");
+    if(file==NULL)
+        printf("file does not exist !");
+    else
+    {
+        printf("file is opened  ");
+       printf("enter your name :");
+       gets(name);
+       fputs(name,file);
+       fputs("\n",file);        ///for new line in file
+       printf("file is written successfully ");
+        fclose(file);
+    }
+
+}
