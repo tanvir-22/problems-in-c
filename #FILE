@@ -103,3 +103,32 @@ int main()
         fclose(file);
     }
 }
+
+
+
+///to print file component in console tab
+
+
+#include<stdio.h>
+int main()
+{
+    FILE *file;
+    char ch;
+    file=fopen("new.txt","r");
+    if (file==NULL)
+    {
+        printf("file not exist ");
+    }
+    else
+    {
+        printf("file opened");
+
+        while(!feof(file))  ///untill the file is ended ///to read file start to end ///foef=file end of
+        {
+            ch=fgetc(file);
+            printf("%c",ch);
+        }
+            fclose(file);
+    }
+
+}
