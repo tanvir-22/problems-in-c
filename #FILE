@@ -132,3 +132,44 @@ int main()
     }
 
 }
+
+
+
+
+
+///to store student data in a file
+
+
+#include<stdio.h>
+int main()
+{
+    FILE *file;
+    char name[30];
+    int age,id,num,i;
+    file=fopen("student.txt","a");
+    if(file==NULL)
+        printf("file not exist ");
+    else
+    {
+        printf("file is opened");
+        printf("enter number of students : ");
+        scanf("%d",&num);
+          fflush(stdin);
+        for(i=0;i<num;i++)
+        {
+            printf("enter student name : ");
+            gets(name);
+            fflush(stdin);
+            printf("enter age :");
+            scanf("%d",&age);
+              fflush(stdin);
+            printf("enter id :");
+            scanf("%d",&id);
+              fflush(stdin);
+            ///to write data in file
+            fprintf(file,"\n%s\t\t%d\t%d\n",name,age,id);
+
+        }
+        fclose(file);
+    }
+}
