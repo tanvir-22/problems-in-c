@@ -1,3 +1,6 @@
+///opening a file
+
+
 #include<stdio.h>
 int main()
 {
@@ -11,6 +14,34 @@ int main()
     {
         printf("file is opened  ");
         fclose(file);//close file
+    }
+
+}
+
+
+
+///writting a file
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    FILE *file;
+    char name[20]="Tanvir rahman";
+    int len=strlen(name);
+    int i;
+    file = fopen("text.txt","w");	//it will over write for updatig use a
+    if(file==NULL)
+        printf("file does not exist !");
+    else
+    {
+        printf("file is opened  ");
+        for(i=0;i<len;i++)
+        {
+            fputc(name[i],file);
+        }
+        printf("file is written successfully\n");
+        fclose(file);
     }
 
 }
