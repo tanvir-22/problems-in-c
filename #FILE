@@ -18,6 +18,27 @@ int main()
 
 }
 
+///reading from a file 
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    FILE *fp;
+    fp=fopen("test.txt","r");
+    char c;
+    while((c=getc(fp))!=EOF)    ///getc is used to read one character here from file until end of file
+    putchar(c);                 ///putchar is used to print character in console tab
+    fclose(fp);
+}
+
+
+
+
 
 
 ///writting a file
