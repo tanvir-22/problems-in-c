@@ -183,3 +183,43 @@ int main()
     scanf("%d",&n);
     word(n);
 }
+
+
+
+///find maximum number from array using recursion
+
+
+
+#include<stdio.h>
+int max(int ara[],int n,int m)
+{
+    if(n>-1)
+    {
+        if(ara[n]>m)        ///for minimum change this ' < '
+            {
+                m=ara[n];
+            }
+        return max(ara,n-1,m);
+    }
+    else
+    {
+        return m;
+    }
+}
+int main()
+{
+    int n;
+    printf("enter n : ");
+    scanf("%d",&n);
+    int ara[n];
+    printf("enter array element  :");
+    for(int i =0;i<n;i++)
+    {
+        scanf("%d",&ara[i]);
+    }
+    int m=ara[0];
+    int result = max(ara,n-1,m);
+    printf("the big is  : %d",result);
+    return 0;
+
+}
